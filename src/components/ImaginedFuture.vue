@@ -1,22 +1,22 @@
 <template>
-  <div id="home">
-    Home
+  <div id="description">
+    Imagined Future
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Home',
+  name: 'Description',
   props: {
   }
 }
 </script>
 
 <style scoped>
-#home {
+#description {
   border-style: solid;
   height: 100%;
-  width: 100vw;
+  width: 120vw;
   flex: 0 0 auto;
 }
 </style>

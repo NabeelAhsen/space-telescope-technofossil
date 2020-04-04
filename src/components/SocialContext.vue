@@ -1,22 +1,22 @@
 <template>
-  <div id="home">
-    Home
+  <div id="description">
+    SocialContext
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Home',
+  name: 'Description',
   props: {
   }
 }
 </script>
 
 <style scoped>
-#home {
+#description {
   border-style: solid;
   height: 100%;
-  width: 100vw;
+  width: 150vw;
   flex: 0 0 auto;
 }
 </style>

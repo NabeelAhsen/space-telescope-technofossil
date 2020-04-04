@@ -1,60 +1,87 @@
 <template>
-  <v-app>
-    <v-app-bar
+  <v-app id="app">
+
+    <!-- Permanent navigation drawer minified -->
+    <v-navigation-drawer
       app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
+      mini-variant 
+      permanent
       >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
+      <v-list>
+        <v-list-item
+          v-for="item in items"
+          :key="item.title"
+          link
+          >
+          <v-list-item-icon>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            {{ item.text }}
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
 
+    <!-- Content -->
     <v-content>
-      <HelloWorld/>
+
+      <!-- Permanent scroll keys -->
+      <ScrollButtons class="scroll-keys"/>
+
+      <!-- Main slides -->
+      <div id="scrolling-wrapper-flexbox">
+        <Home/>
+        <Description/>
+        <SocialContext/>
+        <ImaginedFuture/>
+      </div>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import Description from './components/Description';
+import Home from './components/Home';
+import ScrollButtons from './components/ScrollButtons';
+import SocialContext from './components/SocialContext';
+import ImaginedFuture from './components/ImaginedFuture';
 
 export default {
   name: 'App',
-
   components: {
-    HelloWorld,
+    Description,
+    Home,
+    ImaginedFuture,
+    ScrollButtons,
+    SocialContext,
   },
-
   data: () => ({
-    //
+   items: [
+     { title: 'Top', icon: 'mdi-arrow-left-drop-circle-outline' },
+     ],
   }),
 };
 </script>
+
+<style>
+#app {
+  height: 100vh;
+}
+
+#scrolling-wrapper-flexbox {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  border-style: dotted;
+  height: 100%;
+}
+
+.scroll-keys {
+  border-style: dotted;
+  color: red;
+  position: fixed;
+  bottom: 15vh;
+  width: 94vw;
+}
+</style>

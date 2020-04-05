@@ -24,16 +24,20 @@
     </v-navigation-drawer>
 
     <!-- Content -->
-    <v-content>
-
+    <v-content v-scroll:#scrolling-wrapper-flexbox="onScroll">
+      <div class="temp">
+        {{ offsetLeft }}
+      </div>
       <!-- Permanent scroll keys -->
       <ScrollButtons class="scroll-keys"/>
 
       <!-- Main slides -->
-      <div id="scrolling-wrapper-flexbox">
+      <div 
+        id="scrolling-wrapper-flexbox">
         <Home/>
         <Description/>
         <SocialContext/>
+        <Lifecycle/>
         <ImaginedFuture/>
       </div>
     </v-content>
@@ -43,6 +47,7 @@
 <script>
 import Description from './components/Description';
 import Home from './components/Home';
+import Lifecycle from './components/Lifecycle';
 import ScrollButtons from './components/ScrollButtons';
 import SocialContext from './components/SocialContext';
 import ImaginedFuture from './components/ImaginedFuture';
@@ -53,6 +58,7 @@ export default {
     Description,
     Home,
     ImaginedFuture,
+    Lifecycle,
     ScrollButtons,
     SocialContext,
   },
@@ -60,7 +66,13 @@ export default {
    items: [
      { title: 'Top', icon: 'mdi-arrow-left-drop-circle-outline' },
      ],
+    offsetLeft: 0,
   }),
+  methods: {
+    onScroll (e) {
+      this.offsetLeft = e.target.scrollLeft;
+    },
+  },
 };
 </script>
 
@@ -83,5 +95,11 @@ export default {
   position: fixed;
   bottom: 15vh;
   width: 94vw;
+}
+
+.temp {
+  position: fixed;
+  padding-left: 25px;
+  bottom: 0;
 }
 </style>

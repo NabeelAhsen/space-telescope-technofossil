@@ -1,24 +1,14 @@
 # space-telescope-technofossil
 
-## Project setup
-```
-yarn install
-```
+Hi there! If you're reading this, you are mot likely an instructor for HPS316.
+This project is my submission for our Technofossil assignment, where
+I investigate the potential future of a space telescope.
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+---
 
-### Compiles and minifies for production
-```
-yarn build
-```
+> This website is hosted for free on a platform called Heroku. It puts its websites to
+> "sleep" if they are not active for a while, so the first time you try to open
+> this link might take a long time. Once it "wakes up", the first load will be
+> much quicker.
 
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+This project can be found at [https://space-telescope-technofossil.herokuapp.com](https://space-telescope-technofossil.herokuapp.com)

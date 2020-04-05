@@ -1,6 +1,8 @@
 <template>
   <div id="home">
-    Home
+    <h1>HPS316: Technofossil project</h1>
+    <p>This site is currently under construction.</p>
+    <p>Until the buttons are wired up, you can interact with this by scrolling to the right.</p>
   </div>
 </template>
 

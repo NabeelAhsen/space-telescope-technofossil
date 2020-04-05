@@ -16,6 +16,12 @@ const actions = {
 };
 
 const getters = {
+  componentPositions(state) {
+    return state.componentPositions;
+  },
+  componentWidths(state) {
+    return state.componentWidths;
+  },
   homeInformation(state) {
     return {
       position: state.componentPositions[0], 

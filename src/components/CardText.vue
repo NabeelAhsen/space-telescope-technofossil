@@ -13,17 +13,17 @@
       </v-col>
       <v-col cols=2 sm=1></v-col>
 
-      <v-col cols=5 sm=4></v-col>
-      <v-col cols=5 sm=7>
+      <v-col cols=5></v-col>
+      <v-col cols=5 sm=6>
         <hr>
       </v-col>
       <v-col cols=2 sm=1></v-col>
     </v-row>
 
     <!-- Body -->
-    <v-row no-gutters class="pt-5 stroke">
+    <v-row no-gutters class="pt-5">
       <v-spacer/>
-      <v-col cols=4 sm=5>
+      <v-col cols=4 sm=5 class="card-body-text">
         <p>
           {{ body }}
         </p>
@@ -32,17 +32,31 @@
     </v-row>
 
     <!-- Footers -->
-    <v-row class="stroke"></v-row>
+    <v-row no-gutters class="pt-2 captions">
+      <v-spacer/>
+      <v-col cols=4 sm=5>
+        <hr style="border: 0.7px dotted">
+        <div class="card-caption pt-2" v-for="item in captions" v-bind:key="item.heading">
+          <span 
+            class="amber--text font-weight-bold text--darken-3 text-uppercase">
+            {{ item.heading }}
+          </span><br>
+          <span class="card-caption-text">{{ item.body }}</span><br>
+          <span class="font-italic font-weight-bold">{{ item.cite }}</span>
+        </div>
+      </v-col>
+      <v-col cols=2 sm=1></v-col>
+    </v-row>
   </v-container>
 </template>
 
 <script>
 export default {
   name: 'CardText',
-  props: {
-    heading: String,
-    subheading: String,
-    body: String,
+  props: ['heading', 'subheading', 'body', 'captions'],
+  data: function () {
+    return {
+    }
   },
 }
 </script>
@@ -50,7 +64,14 @@ export default {
 <style scoped>
 .card-body-text {
   overflow: auto;
-  max-height: 50vh;
+  max-height: 40vh;
+}
+.card-caption {
+  font-size: 0.6rem;
+}
+.captions {
+  max-height: 20vh;
+  overflow: auto;
 }
 hr {
   border: 1px solid;
@@ -65,6 +86,7 @@ h3 {
   font-weight: 300;
 }
 p {
+  font-size: 0.8rem;
 }
 .stroke {
   border: 3px solid red;

@@ -2,7 +2,7 @@
   <div id="home">
     <!-- Earth background -->
     <kinesis-container 
-      duration="15000"
+      duration=15000
       class="pa-0 ma-0">
       <kinesis-element 
         axis="y"
@@ -16,17 +16,17 @@
     <!-- Hubble telescope -->
     <kinesis-container class="hst">
       <!-- background -->
-      <kinesis-element :strength="10" maxX="20" maxY="20">
+      <kinesis-element :strength="10" maxX=20 maxY=20>
         <img class="hst-item" src="@/assets/home/hst-3.png">
       </kinesis-element>
 
       <!-- midground -->
-      <kinesis-element :strength="20" maxX="35" maxY="30">
+      <kinesis-element :strength="20" maxX=35 maxY=30>
         <img class="hst-item" src="@/assets/home/hst-2.png">
       </kinesis-element>
 
       <!-- foreground -->
-      <kinesis-element :strength="30" maxX="50" maxY="50">
+      <kinesis-element :strength="30" maxX=50 maxY=50>
         <img class="hst-item" src="@/assets/home/hst-1.png">
       </kinesis-element>
 
@@ -74,6 +74,9 @@ export default {
 </script>
 
 <style scoped>
+.stroke {
+  border: 5px solid red;
+}
 #home {
   background: linear-gradient(180deg, rgba(0,0,0,1) 75%, rgba(30,40,50,1) 100%);
   min-width: 105vw;
@@ -86,12 +89,13 @@ export default {
   z-index: 2;
 }
 h1 {
+  font-family: 'DM Serif Display', cursive;
   color: #ffc107;
   font-weight: 300;
   font-size: 1.6em;
 }
 h2 {
-  font-weight: 600;
+  font-weight: 300;
   font-size: 1.2em;
 }
 p {
@@ -112,9 +116,10 @@ p {
 .hst {
   position: relative;
   top: -25%;
-  left: 20%;
+  left: 50%;
   max-height: 300px;
   max-width: 300px;
+  width: 10px;
 }
 .hst-item {
   user-drag: none;
@@ -122,7 +127,7 @@ p {
   user-select: none;
   max-width: 30vw;
   position: fixed;
-  left: 10%;
+  left: -10%;
   top: -9%;
 }
 .unclickable {

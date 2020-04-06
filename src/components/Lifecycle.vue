@@ -37,9 +37,7 @@ export default {
 
 <style scoped>
 #lifecycle {
-  border-style: solid;
-  height: 100%;
-  width: 190vw;
-  flex: 0 0 auto;
+  border: 5px solid red;
+  min-width: 100vw;
 }
 </style>

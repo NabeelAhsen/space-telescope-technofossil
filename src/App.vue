@@ -1,11 +1,12 @@
 <template>
   <v-app id="app">
 
-    <!-- Permanent navigation drawer minified -->
+    <!-- Permanent navigation drawer minified --> 
     <v-navigation-drawer
-      app
       mini-variant 
+      dark
       permanent
+      app
       >
       <v-list>
         <v-list-item
@@ -24,21 +25,21 @@
     </v-navigation-drawer>
 
     <!-- Content -->
-    <v-content v-scroll:#scrolling-wrapper-flexbox="onScroll">
-      <!-- Permanent scroll keys -->
-      <ScrollButtons v-bind:offset-left='offsetLeft' class="scroll-keys"/>
-
-      <!-- Progress bar -->
+    <v-content v-scroll:#scroll-wrapper="onScroll">
+      <!-- Progress bar  -->
       <v-progress-linear
-        absolute
+        fixed
         bottom
+        color="amber"
         :value="progress"
         >
-      </v-progress-linear>
+      </v-progress-linear> 
+
+     <!-- Permanent scroll keys -->
+      <ScrollButtons v-bind:offset-left='offsetLeft' class="scroll-keys"/>
 
       <!-- Main slides -->
-      <div 
-        id="scrolling-wrapper-flexbox">
+      <div id="scroll-wrapper" class="deck">
         <Home/>
         <Description/>
         <SocialContext/>
@@ -50,24 +51,24 @@
 </template>
 
 <script>
-import Description from './components/Description';
-import Home from './components/Home';
-import Lifecycle from './components/Lifecycle';
-import ScrollButtons from './components/ScrollButtons';
-import SocialContext from './components/SocialContext';
-import ImaginedFuture from './components/ImaginedFuture';
+ import Description from './components/Description';
+ import Home from './components/Home';
+ import Lifecycle from './components/Lifecycle';
+ import ScrollButtons from './components/ScrollButtons';
+ import SocialContext from './components/SocialContext';
+ import ImaginedFuture from './components/ImaginedFuture';
 
 import { mapGetters } from 'vuex';
 
 export default {
   name: 'App',
   components: {
-    Description,
-    Home,
-    ImaginedFuture,
-    Lifecycle,
-    ScrollButtons,
-    SocialContext,
+     Description,
+     Home,
+     ImaginedFuture,
+     Lifecycle,
+     ScrollButtons,
+     SocialContext,
   },
   data: () => ({
    items: [
@@ -101,27 +102,35 @@ export default {
 </script>
 
 <style>
-#app {
+body {
   height: 100vh;
+  width: 100%;
 }
 
-#scrolling-wrapper-flexbox {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  border-style: dotted;
-  height: 100%;
+#app {
+  font-family: 'Open Sans', sans-serif;
 }
-::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
+
+.deck {
+  min-height: 100%;
+  min-width: 100%;
+  display: flex;
+  overflow-x: auto;
+}
+.slide {
+  border: 5px solid red;
+  min-width: 50vw;
+}
+
+.deck::-webkit-scrollbar {
+  display: none;
 }
 
 .scroll-keys {
-  border-style: dotted;
-  color: red;
   position: fixed;
+  z-index: 99999;
   bottom: 15vh;
-  width: 94vw;
+  width: 93vw;
+  margin-left: 5px;
 }
 </style>

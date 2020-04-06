@@ -8,8 +8,7 @@
           fab 
           dark 
           v-scroll-to="{ el: previous }" 
-          @click="toggleLeft"
-          color="cyan">
+          color="amber darken-2">
           <v-icon dark>mdi-chevron-left</v-icon>
         </v-btn>
       </v-fab-transition>
@@ -23,8 +22,7 @@
           fab 
           dark 
           v-scroll-to="{ el: next }" 
-          @click="toggleRight"
-          color="cyan">
+          color="amber darken-2">
           <v-icon dark>mdi-chevron-right</v-icon>
         </v-btn>
       </v-fab-transition>
@@ -77,14 +75,6 @@ export default {
         this.previous = '#imagined-future';
       }
     }
-  },
-  methods: {
-    toggleRight () {
-      this.right = true;
-    },
-    toggleLeft () {
-      this.right = false;
-    },
   },
   computed: {
     ...mapGetters({

@@ -1,8 +1,44 @@
 <template>
   <div id="home">
-    <h1>HPS316: Technofossil project</h1>
-    <p>This site is currently under construction.</p>
-    <p>Until the buttons are wired up, you can interact with this by scrolling to the right.</p>
+    <!-- Earth background -->
+    <kinesis-container 
+      duration="15000"
+      class="pa-0 ma-0">
+      <kinesis-element 
+        axis="y"
+        :strength="80">
+        <div>
+        <img class="bg-earth" src="@/assets/home/bg-earth.png">
+        </div>
+      </kinesis-element>
+    </kinesis-container>
+
+    <!-- Hubble telescope -->
+    <kinesis-container class="hst">
+      <!-- background -->
+      <kinesis-element :strength="10" maxX="20" maxY="20">
+        <img class="hst-item" src="@/assets/home/hst-3.png">
+      </kinesis-element>
+
+      <!-- midground -->
+      <kinesis-element :strength="20" maxX="35" maxY="30">
+        <img class="hst-item" src="@/assets/home/hst-2.png">
+      </kinesis-element>
+
+      <!-- foreground -->
+      <kinesis-element :strength="30" maxX="50" maxY="50">
+        <img class="hst-item" src="@/assets/home/hst-1.png">
+      </kinesis-element>
+
+    </kinesis-container>
+
+    <!-- Body of text -->
+    <v-container class="home-title ma-0">
+      <h1>Resting our Eyes in the Skies</h1>
+      <h2>HPS316: Technofossil Project</h2>
+      <p>You can navigate using the blue directional buttons, by scrolling, or
+      by using your keys.</p>
+    </v-container>
   </div>
 </template>
 
@@ -39,9 +75,86 @@ export default {
 
 <style scoped>
 #home {
-  border-style: solid;
-  height: 100%;
-  width: 100vw;
-  flex: 0 0 auto;
+  background: linear-gradient(180deg, rgba(0,0,0,1) 75%, rgba(30,40,50,1) 100%);
+  min-width: 120vw;
+  color: white;
+}
+.home-title {
+  position: relative;
+  top: 10vh;
+  padding-left: 3vw;
+  z-index: 2;
+}
+h1 {
+  color: #ffc107;
+  font-weight: 300;
+  font-size: 1.6em;
+}
+h2 {
+  font-weight: 400;
+  font-size: 1.4em;
+}
+p {
+  font-weight: 500;
+  font-size: 1em;
+}
+.bg-earth {
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  width: 100%;
+  z-index: -1;
+  margin-top: -50vh;
+}
+.contained {
+  max-width: 100%;
+}
+.hst {
+  position: relative;
+  top: -25%;
+  left: 20%;
+  max-height: 300px;
+  max-width: 300px;
+}
+.hst-item {
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  max-width: 30vw;
+  position: fixed;
+  left: 10%;
+  top: -9%;
+}
+.unclickable {
+  pointer-events: none;
+}
+
+/* --- Ipads and stuff -- */
+@media screen
+and (min-width: 768px) 
+and (max-width: 1200px) 
+and (min-height: 500px) {
+  .bg-earth {
+    margin-top: -5vh;
+  }
+  .home-title {
+    top: 40vh;
+  }
+}
+
+/* --- Laptops --- */
+@media screen
+and (min-width: 1200px)
+and (max-width: 1600px)
+and (min-height: 800px) {
+  .bg-earth {
+    margin-top: -10vh;
+  }
+  .hst {
+    top: -10%;
+  }
+  .home-title {
+    top: 40vh;
+  }
 }
 </style>

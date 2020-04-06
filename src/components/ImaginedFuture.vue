@@ -41,8 +41,7 @@ export default {
 
 <style scoped>
 #imagined-future {
-  border-style: solid;
-  height: 100%;
+  background-color: pink;
   width: 120vw;
   flex: 0 0 auto;
 }

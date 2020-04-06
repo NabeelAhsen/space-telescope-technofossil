@@ -1,17 +1,17 @@
 import Vue from 'vue'
 import App from './App.vue'
+import VueKinesis from 'vue-kinesis';
 var VueScrollTo = require('vue-scrollto');
 
 // Install a scroller
 Vue.use(VueScrollTo, {
-  container: "#scrolling-wrapper-flexbox",
+  container: "#scroll-wrapper",
   duration: 2500,
   easing: "ease-in-out",
-  offset: 0,
   x: true,
   y: false,
-  force: true,
 });
+Vue.use(VueKinesis);
 
 // State management
 import store from './store';

@@ -1,6 +1,5 @@
 <template>
   <div id="description">
-    Description
   </div>
 </template>
 
@@ -38,9 +37,7 @@ export default {
 
 <style scoped>
 #description {
-  border-style: solid;
-  height: 100%;
-  width: 150vw;
-  flex: 0 0 auto;
+  border: 5px solid green;
+  min-width: 100vw;
 }
 </style>

@@ -36,8 +36,8 @@
     <v-container class="home-title ma-0">
       <h1>Resting our Eyes in the Skies</h1>
       <h2>HPS316: Technofossil Project</h2>
-      <p>You can navigate using the blue directional buttons, by scrolling, or
-      by using your keys.</p>
+      <p>You can navigate using the directional buttons, by scrolling, or
+      by using your left and right keys.</p>
     </v-container>
   </div>
 </template>
@@ -76,7 +76,7 @@ export default {
 <style scoped>
 #home {
   background: linear-gradient(180deg, rgba(0,0,0,1) 75%, rgba(30,40,50,1) 100%);
-  min-width: 120vw;
+  min-width: 105vw;
   color: white;
 }
 .home-title {
@@ -91,8 +91,8 @@ h1 {
   font-size: 1.6em;
 }
 h2 {
-  font-weight: 400;
-  font-size: 1.4em;
+  font-weight: 600;
+  font-size: 1.2em;
 }
 p {
   font-weight: 500;
@@ -155,6 +155,13 @@ and (min-height: 800px) {
   }
   .home-title {
     top: 40vh;
+  }
+}
+
+@media screen
+and (min-width: 1600px) {
+  .bg-earth {
+    margin-top: -10vh;
   }
 }
 </style>

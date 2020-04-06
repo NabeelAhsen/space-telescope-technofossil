@@ -6,8 +6,8 @@ var VueScrollTo = require('vue-scrollto');
 // Install a scroller
 Vue.use(VueScrollTo, {
   container: "#scroll-wrapper",
-  duration: 2500,
-  easing: "ease-in-out",
+  duration: 1000,
+  easing: "ease-out",
   x: true,
   y: false,
 });

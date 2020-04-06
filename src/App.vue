@@ -40,7 +40,7 @@
 
       <!-- Main slides -->
       <div id="scroll-wrapper" class="deck">
-        <Home/>
+        <Home v-show="false"/>
         <Description/>
         <SocialContext/>
         <Lifecycle/>
@@ -108,7 +108,7 @@ body {
 }
 
 #app {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .deck {

@@ -36,7 +36,7 @@ module.exports = {
      ],
     },
     second: {
-      body: `Foo2`,
+      body: `Space telescopes are designed to be transportable, durable, and effect. Aluminum is used often and widely to coat the frames of satellites and space telescopes as thermal blankets. To produce aluminum, however, a steady supply of bauxite rock is needed. At the turn of the nineteenth century, the United States and France were the only large known distributors of bauxite. By the 1930s, however, there were mines being dug across South America, Southeast Asia, and part of Southern Europe (Gendron et. al 2013, pp.24). By the 1940s, bauxite was being mined and distributed from six continents. This increased production and demand for aluminum is often attributed to the civiian and military uses of aluminum in the early twentieth century. In "Aluminum Ore", Robin Gendron et. al. argue that this dramatic increase in demand is the result of worldwide global value chains that were initially created by government agencies, but were followed through via local business. Gendron suggests that the creation of such global value chains following the First World War was a direct result of the efforts of both governments and businesses. Currently, Australia and China are among the top bauxite producers in the world, producing roughly 68,000 and 44,000 million tons per year respectively (pp. 8). Gendron also points out that these value chains were naturally a result of a surge in demand for "fire-power and transportation, and the advent of military aviation" (pp. 9).`,
       captions: [
         {
           heading: "right",
@@ -76,16 +76,22 @@ module.exports = {
   },
   Lifecycle: {
     body: `Lifecycle`,
-    captions: [],
+    captions: [
+      {
+        heading: `right`,
+        body: `The Voyager spacecraft showcasing where the Golden Record is mounted.`,
+        cite: `Credit: NASA/JPL`,
+      },
+    ],
   },
   ImaginedFuture: {
     first: {
-      body: `Foo1`,
+      body: `The goal of a space telescope is to serve a long and useful life collecting as much information as it can. Its retirement is a welcome one at the end of its lifespan, but it's rare for a successful space telescope to embed itself as a technofossil in the Earth. Space telescopes are often retired while in orbit. To do this, ground crew discontinues any communications with that telescope and allows it to continue its orbit or trajectory it was on. This eventuality is met with satisfaction by some astronomers, and frustration by others. Decommissioned satellites and space telescope equipment can often be found among the "breakup debris" that orbits earth. Shenyan Chen discussed the phenomena of increasing space debris that is acumulating in Earth's orbital atmosphere in her publication "The Space Debris Problem" (Chen, 2020). Chen argues that such a sudden increase in space debris is making it hard for organizations like the International Space Traffic Management Organization (ISMO) to catalogue and keep track of every piece of junk. According to Chen and NASA, knowing the location of each junk is an important way to make decisions regarding space telescope launches and maintenance procedures. However, international cataloguing efforts also have given rise to efforts like the Active Debris Removal (ADR) initiatives.`,
       captions: [
         {
           heading: `right`,
-          body: `foo`,
-          cite: `foo cite1`,
+          body: `You can interact with the globe using your cursor.`,
+          cite: ``,
         },
       ],
     },

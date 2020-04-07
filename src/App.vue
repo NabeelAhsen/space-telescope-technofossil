@@ -40,11 +40,11 @@
 
       <!-- Main slides -->
       <div id="scroll-wrapper" class="deck">
-        <Home v-show="true"/>
-        <Description v-show="true"/>
+        <Home v-show="false"/>
+        <Description v-show="false"/>
         <SocialContext v-show="false"/>
         <Lifecycle v-show="false"/>
-        <ImaginedFuture v-show="false"/>
+        <ImaginedFuture v-show="true"/>
       </div>
     </v-content>
   </v-app>

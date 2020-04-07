@@ -15,6 +15,56 @@ module.exports = {
       }
     ],
   },
-
+  SocialContextText: {
+    first: {
+      body: `Foo1`,
+      captions: [
+        {
+          heading: "right (1)",
+          body: "foo1",
+          cite: "foo cite1",
+        },
+        {}
+      ],
+    },
+    second: {
+      body: `Foo2`,
+      captions: [
+        {
+          heading: "right (2)",
+          body: "foo2",
+          cite: "foo cite2",
+        },
+        {}
+      ],
+    },
+  },
+  Lifecycle: {
+    body: `Lifecycle`,
+    captions: [],
+  },
+  ImaginedFuture: {
+    first: {
+      body: `Foo1`,
+      captions: [
+        {
+          heading: `right`,
+          body: `foo`,
+          cite: `foo cite1`,
+        },
+      ],
+    },
+    second: {
+      body: `Foo2`,
+      captions: [
+        {
+          heading: `right`,
+          body: `foo`,
+          cite: `foo cite2`,
+        },
+      ],
+    },
+    
+  },
 }
 

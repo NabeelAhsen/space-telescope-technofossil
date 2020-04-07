@@ -40,10 +40,10 @@
 
       <!-- Main slides -->
       <div id="scroll-wrapper" class="deck">
-        <Home v-show="false"/>
-        <Description v-show="false"/>
-        <SocialContext v-show="false"/>
-        <Lifecycle v-show="false"/>
+        <Home v-show="true"/>
+        <Description v-show="true"/>
+        <SocialContext v-show="true"/>
+        <Lifecycle v-show="true"/>
         <ImaginedFuture v-show="true"/>
       </div>
     </v-content>
@@ -72,7 +72,7 @@ export default {
   },
   data: () => ({
    items: [
-     { title: 'Top', icon: 'mdi-arrow-left-drop-circle-outline' },
+     { title: 'Top', icon: 'mdi-page-first' },
      ],
     offsetLeft: 0,
     active: 'none',

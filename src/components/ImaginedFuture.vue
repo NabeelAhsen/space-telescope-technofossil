@@ -80,7 +80,12 @@
                 </v-card>
               </v-col>
               <!-- Part 1:B Voyager images -->
-              <v-col cols=3></v-col>
+              <v-col cols=3 style="max-height: 100vh;">
+                <v-img 
+                     height="100%"
+                     src="@/assets/imagined-future/golden-record.jpg">
+                </v-img>
+              </v-col>
             </v-row>
           </v-container>
         </v-col>
@@ -110,7 +115,7 @@ export default {
       subheading1: "exploring our space junk",
       imaginedFutureBody1: ImaginedFuture.first.body,
       imaginedFutureCaptions1: ImaginedFuture.first.captions,
-      heading2: "Voyager 2",
+      heading2: "the Golden Record",
       subheading2: "our culture flung to the stars",
       imaginedFutureBody2: ImaginedFuture.second.body,
       imaginedFutureCaptions2: ImaginedFuture.second.captions,

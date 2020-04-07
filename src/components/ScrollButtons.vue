@@ -18,7 +18,7 @@
       <!-- TODO: Forward navigator -->
       <v-fab-transition>
         <v-btn 
-          v-show="offsetLeft < positions[4] || !offsetLeft"
+          v-show="offsetLeft < (positions[4] + widths[4]/2) || !offsetLeft"
           fab 
           dark 
           v-scroll-to="{ el: next }" 

@@ -14,7 +14,7 @@
         </v-col>
         <v-col cols=8 class="lifecycle-img">
           <v-img max-height="100%"
-                 src="http://placekitten.com/150/200"></v-img>
+                 src="@/assets/lifecycle/voyager.jpg"></v-img>
         </v-col>
       </v-row>
     </v-container>
@@ -34,8 +34,8 @@ export default {
   },
   data: function () {
     return {
-      heading: "leaving earth",
-      subheading: "telescopes and their uses",
+      heading: "leaving home",
+      subheading: "the voyager missions",
       lifecycleBody: Lifecycle.body,
       lifecycleCaptions: Lifecycle.captions,
     }
@@ -69,6 +69,9 @@ export default {
 <style scoped>
 #lifecycle {
   min-width: 100vw;
+}
+.lifecycle-img {
+  max-height: 100vh;
 }
 .stroke {
   border: 5px solid red;

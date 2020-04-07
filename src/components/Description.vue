@@ -4,16 +4,16 @@
       <v-row no-gutters style="height: 100%">
         <v-col cols=4>
           <v-card tile class="description-tile">
-           <CardText
+            <CardText
               :heading="heading"
               :subheading="subheading"
               :body="descriptionBody"
               :captions="captionList"
-            />
+              />
           </v-card>
         </v-col>
         <v-col cols=8 class="description-img">
-          <v-img max-height="100%" src="http://placekitten.com/150/200"></v-img>
+          <v-img max-height="100%" src="@/assets/description/mirror.jpg"></v-img>
         </v-col>
       </v-row>
     </v-container>
@@ -68,7 +68,7 @@ export default {
 
 <style scoped>
 #description {
-  min-width: 110vw;
+  min-width: 105vw;
   background: grey;
 }
 .description-tile {

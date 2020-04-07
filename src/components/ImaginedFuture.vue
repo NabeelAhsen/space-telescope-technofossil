@@ -76,6 +76,7 @@
                     :heading="heading2"
                     :subheading="subheading2"
                     :body="imaginedFutureBody2"
+                    :quote="imaginedFutureQuote2"
                     :captions="imaginedFutureCaptions2"/>
                 </v-card>
               </v-col>
@@ -91,8 +92,42 @@
         </v-col>
 
         <!-- Part 2: Music -->
-        <v-col cols=4 class="stroke"></v-col>
-        <card-text v-show="false"/>
+        <v-col cols=4>
+          <v-container fluid id="saturn" class="text-left">
+            <v-row no-gutters class="text-right white--text">
+              <v-col cols=4 class="">
+                <h1 class="amber--text text--darken-2 music-heading">
+                  Music from Earth 
+                </h1>
+                <h2 class="pt-5 font-weight-black amber--text text--lighten-2">Dark Was the Night</h2>
+                <h3 class="font-weight-thin">Blind Willie Johnson</h3>
+                <v-row no-gutters>
+                  <v-spacer></v-spacer>
+                  <v-col cols=6 class="pa-0" style="line-height: 1.2;">
+                    <p>
+                     An audio component of the Golden Record was called "Music of
+                     Earth", which hosted a curated list of songs."Dark Was the Night", written and performed by
+                     Blind Willie Johnson (3:15) was the second to last track on
+                     the Voyager Record.
+                    </p>
+                    <p class="font-italic">
+                      Credit: NASA/JPL Archives
+                    </p>
+                  </v-col>
+                </v-row>
+                  <audio class="mt-5" controls>
+                     <source src="@/assets/imagined-future/song.mp3">
+                   </audio>
+ 
+             </v-col>
+              <div id="voyager">
+                <v-img
+                  src="@/assets/imagined-future/voyager.png">
+                  </v-img>
+              </div>
+            </v-row>
+          </v-container>
+        </v-col>
       </v-row>
     </v-container>
   </div>
@@ -119,6 +154,9 @@ export default {
       subheading2: "our culture flung to the stars",
       imaginedFutureBody2: ImaginedFuture.second.body,
       imaginedFutureCaptions2: ImaginedFuture.second.captions,
+      imaginedFutureQuote2: ImaginedFuture.second.quote,
+      song: require("@/assets/imagined-future/song.mp3"),
+      play: true,
     }
   },
   mounted: function() {
@@ -131,6 +169,11 @@ export default {
       };
       this.$store.dispatch('setWidthAndPosition', payload);
     })
+  },
+  computed: {
+    plty: function () {
+      return true;
+    }
   },
   methods: {
     handleResize: function () {
@@ -150,10 +193,35 @@ export default {
 <style scoped>
 #imagined-future {
   min-width: 300vw;
+  background: linear-gradient(180deg, rgba(0,0,0,1) 75%, rgba(30,40,50,1) 100%);
 }
 #space-debris {
   max-height: 100vh;
   position: fixed;
+}
+#saturn {
+ height: 100%;
+ background-image: url('~@/assets/imagined-future/saturn.png');
+ background-position: top;
+ background-repeat: no-repeat;
+ background-size: 60vw;
+ position: relative;
+}
+#voyager {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 10vh;
+  animation: mymove 300s infinite;
+}
+.music-heading {
+  font-family: 'DM Serif Display', cursive;
+  line-height: 0.76;
+  font-size: 5rem;
+}
+@keyframes mymove {
+  from {left: 0;}
+  to {left: 100vw;}
 }
 .origin {
   position: relative;

@@ -1,6 +1,7 @@
 <template>
   <div id="home">
     <!-- Earth background -->
+    <div style="width: 100%; height: 100%; position: relative;">
     <kinesis-container 
       duration=15000
       class="pa-0 ma-0">
@@ -14,6 +15,7 @@
     </kinesis-container>
 
     <!-- Hubble telescope -->
+
     <kinesis-container class="hst">
       <!-- background -->
       <kinesis-element :strength="10" maxX=20 maxY=20>
@@ -37,8 +39,12 @@
       <h1>Resting our Eyes in the Skies</h1>
       <h2>HPS316: Technofossil Project</h2>
       <p>You can navigate using the directional buttons, by scrolling, or
-      by using your left and right keys.</p>
+      by using your left and right keys.
+      <br>
+      Audio is needed for one of the
+      components.</p>
     </v-container>
+    </div>
   </div>
 </template>
 
@@ -84,7 +90,6 @@ export default {
 }
 .home-title {
   position: relative;
-  top: 10vh;
   padding-left: 3vw;
   z-index: 2;
 }
@@ -114,12 +119,11 @@ p {
   max-width: 100%;
 }
 .hst {
-  position: relative;
-  top: -25%;
+  position: absolute;
   left: 50%;
-  max-height: 300px;
-  max-width: 300px;
-  width: 10px;
+  top: 5vh;
+  height: 300px;
+  width: 300px;
 }
 .hst-item {
   user-drag: none;
@@ -128,7 +132,6 @@ p {
   max-width: 30vw;
   position: fixed;
   left: -10%;
-  top: -9%;
 }
 .unclickable {
   pointer-events: none;
@@ -156,10 +159,10 @@ and (min-height: 800px) {
     margin-top: -10vh;
   }
   .hst {
-    top: -10%;
+    top: 15vh;
   }
   .home-title {
-    top: 40vh;
+    top: 0;
   }
 }
 
@@ -167,6 +170,9 @@ and (min-height: 800px) {
 and (min-width: 1600px) {
   .bg-earth {
     margin-top: -10vh;
+  }
+  .hst {
+    top: 25vh;
   }
 }
 </style>

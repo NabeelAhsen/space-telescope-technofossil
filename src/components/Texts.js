@@ -75,11 +75,11 @@ module.exports = {
     },
   },
   Lifecycle: {
-    body: `Lifecycle`,
+    body: `The Voyager 1 and 2 spacecrafts were constructed identical to each other. They were launched in 1977 from Cape Carnaveral, Florida with the primary mission of studying Saturn and Jupiter. The telescopes mounted to these space crafts were not meant to orbit Earth; they were meant to head to the stars. They discovered active volcanoes on the moons of Jupiter and studied the rings of Saturn in great detail. Completing their primary mission successfully, the voyager spacecrafts then continued on to their secondary mission, the Voyager Interstellar Mission. The imagined future of these spacecrafts was not to be decommissioned or retired, but to act as "messages in bottles" through interstellar space. It was well intended that their space telescopes will not return to Earth to be fossilized in any manner. They were intended to be testaments to human culture that extended beyond our solar system. Nick Sagan, the son of Astronomer Carl Sagan who was responsible for the Voyager missions, reflects on their success: "the Voyager milestone is not just a thought exercise - it's an actual, physical accomplishment on behalf of all humanity" (Showstack 2013, pp. 351).`,
     captions: [
       {
         heading: `right`,
-        body: `The Voyager spacecraft showcasing where the Golden Record is mounted.`,
+        body: `The Voyager spacecraft shows off an impressive 3.7 meter wide reflector dish.`,
         cite: `Credit: NASA/JPL`,
       },
     ],
@@ -96,16 +96,20 @@ module.exports = {
       ],
     },
     second: {
-      body: `Foo2`,
+      body: `Novelist Thomas Mallon wrote in his 2011 essay "The Night Shift" that the Voyager missions "[carry with [them] more of human personality and culture ... than any of the manned spacecraft that went to the moon" (Mallon 2011, pp. 169). He was referring to the Golden Records, 12-inch phonograph records that were aboard Voyager 1 and 2. These records were gold-plated copper disks that embedded within them the diversity of life on and culture on Earth. The etchings on the cover of this record are instructions for how it is meant to be used. The top left corner depicts an image of the record itself along with instructions on how to use the stylus it carries. The asterisk-like figure below it shows Earth's relative position to 14 pulsar stars. The intention is to draw a map back to us should this record ever be found. The remaining markers communicate the sciences we know, starting with the fundamental diagram of the Hydrogen atom in the bottom right. Hydrogen is the most abundant atom in the universe, and the designers of this record believed that it should be universally recognized by life-like-us. The instructions taken together decode the mathematics we use, the physics we understand, and ultimately show how to decode the binary signals that are encoded within the record. These images show pictures of people, buildings, things, and of the Earth. Encoded parallel to them are audio waves that host a collection of music and sounds of Earth. These included the sounds of surf, wind, thunder, and greetings in 55 languages.`,
       captions: [
         {
           heading: `right`,
-          body: `foo`,
-          cite: `foo cite2`,
+          body: `The front cover of the Golden Record. For a reference to its size relative to the Voyager spacecrafts, see the "Leaving Earth" section.`,
+          cite: `Credit: NASA/JPL`,
         },
       ],
+      quote: {
+        body: `Poignant though that it is, I often dream about a benevolent alien civilization finding the Voyager, telling the story of how they made it through their technological adolescence without destroying themselves, and show us how we can do the same.`,
+        cite: `(Shawstack 2013, pp. 351)`,
+        author: `Nick Sagan`,
+      },
     },
-    
   },
 }
 

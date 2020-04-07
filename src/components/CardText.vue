@@ -23,6 +23,20 @@
     <!-- Body -->
     <v-row no-gutters class="pt-5">
       <v-spacer/>
+        <v-col
+          class="quote"
+          v-if="quote && 1"
+          cols=4>
+          <span class="font-weight-light font-italic">
+            "{{ quote.body }}"
+          </span><br>
+          <span class="font-weight-medium amber--text text--darken-2 cite">
+            {{ quote.author }}
+          </span><br>
+          <span style="font-size: 0.6rem;" class="font-weight-bold">
+            {{ quote.cite }}
+          </span>
+        </v-col>
       <v-col cols=4 sm=5 class="card-body-text">
         <p>
           {{ body }}
@@ -53,7 +67,7 @@
 <script>
 export default {
   name: 'CardText',
-  props: ['heading', 'subheading', 'body', 'captions'],
+  props: ['heading', 'subheading', 'body', 'captions', 'quote'],
   data: function () {
     return {
     }
@@ -68,6 +82,12 @@ export default {
 }
 .card-caption {
   font-size: 0.6rem;
+}
+.quote {
+  max-height: 40vh;
+}
+.cite {
+  font-size: 0.8rem;
 }
 .captions {
   max-height: 20vh;

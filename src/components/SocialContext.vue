@@ -58,7 +58,7 @@ export default {
   data: function () {
     return {
       heading1: "twentieth century",
-      subheading1: "the adaptation of reflective mirrors",
+      subheading1: "the switch to reflective mirrors",
       socialContextBody1: SocialContextText.first.body,
       socialContextCaptions1: SocialContextText.first.captions,
       image1: require("@/assets/social-context/scientists.jpg"),

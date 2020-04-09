@@ -106,8 +106,8 @@
                   <v-col cols=6 class="pa-0" style="line-height: 1.2;">
                     <p>
                      An audio component of the Golden Record was called "Music of
-                     Earth", which hosted a curated list of songs."Dark Was the Night", written and performed by
-                     Blind Willie Johnson (3:15) was the second to last track on
+                     Earth". It hosted a curated list of songs, of which "Dark Was the Night", written and performed by
+                     Blind Willie Johnson (3:15), was the second to last track on
                      the Voyager Record.
                     </p>
                     <p class="font-italic">

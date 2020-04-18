@@ -152,6 +152,13 @@ and (min-height: 500px) {
 
 /* --- Laptops --- */
 @media screen
+and (max-width: 1199px) {
+  .home-title {
+    top: -30vh;
+  }
+}
+
+@media screen
 and (min-width: 1200px)
 and (max-width: 1600px)
 and (min-height: 800px) {

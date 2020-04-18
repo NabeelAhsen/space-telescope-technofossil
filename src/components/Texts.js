@@ -40,7 +40,7 @@ module.exports = {
       captions: [
         {
           heading: "right",
-          body: "These images were provided by the Alcoa Company. Permission for public use pending. Scroll over a picture to pause the slides.",
+          body: "These images were provided by the Alcoa Corporation. Permission for use in this project obtained on April 16, 2020. Scroll over a picture to pause the slides.",
           cite: "Alcoa Company, 2020",
         },
         {}

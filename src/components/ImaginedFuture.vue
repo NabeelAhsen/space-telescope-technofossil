@@ -99,6 +99,9 @@
                 <h1 class="amber--text text--darken-2 music-heading">
                   Music from Earth 
                 </h1>
+                  <audio class="mt-5" controls>
+                     <source src="@/assets/imagined-future/song.mp3">
+                   </audio>
                 <h2 class="pt-5 font-weight-black amber--text text--lighten-2">Dark Was the Night</h2>
                 <h3 class="font-weight-thin">Blind Willie Johnson</h3>
                 <v-row no-gutters>
@@ -115,10 +118,7 @@
                     </p>
                   </v-col>
                 </v-row>
-                  <audio class="mt-5" controls>
-                     <source src="@/assets/imagined-future/song.mp3">
-                   </audio>
- 
+
              </v-col>
               <div id="voyager">
                 <v-img
@@ -218,6 +218,11 @@ export default {
   font-family: 'DM Serif Display', cursive;
   line-height: 0.76;
   font-size: 5rem;
+}
+@media screen and (max-width: 1199px) {
+  .music-heading {
+    font-size: 4rem;
+  }
 }
 @keyframes mymove {
   from {left: 0;}

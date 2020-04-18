@@ -99,16 +99,27 @@ hr {
 h1 {
   line-height: 0.76;
   font-family: 'DM Serif Display', cursive;
-  font-size: 5rem;
+  font-size: 4rem;
 }
 h3 {
   line-height: 3;
   font-weight: 300;
+  font-size: 0.9rem;
 }
 p {
   font-size: 0.8rem;
 }
 .stroke {
   border: 3px solid red;
+}
+
+@media screen
+and (min-width: 1200px) {
+  h1 {
+    font-size: 5rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
 }
 </style>
